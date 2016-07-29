@@ -6,11 +6,11 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
-    <ProjectGuid>2986546c-4b3d-49ef-aa31-63208663efa6</ProjectGuid>
+    <ProjectGuid>d301e1c0-f757-48fc-a7ad-fca1be24c4c4</ProjectGuid>
     <RootNamespace>ASP.NETCore</RootNamespace>
     <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">.\obj</BaseIntermediateOutputPath>
     <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup>
     <SchemaVersion>2.0</SchemaVersion>
@@ -18,8 +18,6 @@
   <ItemGroup>
     <DnxInvisibleContent Include="bower.json" />
     <DnxInvisibleContent Include=".bowerrc" />
-    <DnxInvisibleContent Include="package.json" />
-    <DnxInvisibleContent Include=".npmrc" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\DotNet.Web\Microsoft.DotNet.Web.targets" Condition="'$(VSToolsPath)' != ''" />
 </Project>
