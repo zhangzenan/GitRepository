@@ -18,6 +18,7 @@ namespace AspNetCoreNodeApp.Controllers
             return View();
         }
 
+        [Route("Order")]
         public async Task<IActionResult> Get([FromServices] INodeServices nodeServices)
         {
             var result = await nodeServices.InvokeAsync<int>("./Node/addNumbers",1,2);

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using AspNetCoreNodeApp.Middlewares;
 
 namespace AspNetCoreNodeApp
 {
@@ -37,6 +38,13 @@ namespace AspNetCoreNodeApp
             // Add framework services.
             services.AddApplicationInsightsTelemetry(Configuration);
 
+            //api authorized middleware
+            services.AddApiAuthorized(options =>
+            {
+                options.EncryptKey = Configuration.GetSection("ApiKey")["EncryptKey"];
+                options.ExpiredSecond = Convert.ToInt32(Configuration.GetSection("ApiKey")["ExpiredSecond"]);
+            });
+
             services.AddMvc();
 
             //启用 Node Services
@@ -48,6 +56,9 @@ namespace AspNetCoreNodeApp
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
+
+            //api authorized middleware
+            app.UseApiAuthorized();
 
             app.UseApplicationInsightsRequestTelemetry();
 

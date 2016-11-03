@@ -181,3 +181,10 @@ E:\个人资料\DotNetCore\GitRepository\DotNetCore\AspNetCoreNodeApp\Program.cs
 E:\个人资料\DotNetCore\GitRepository\DotNetCore\AspNetCoreNodeApp\Startup.cs
 E:\个人资料\DotNetCore\GitRepository\DotNetCore\AspNetCoreNodeApp\Controllers\NodeController.cs
 E:\个人资料\DotNetCore\GitRepository\DotNetCore\AspNetCoreNodeApp\Controllers\ValuesController.cs
+E:\个人资料\DotNetCore\GitRepository\DotNetCore\AspNetCoreNodeApp\Middlewares\ApiAuthorizedExtensions.cs
+E:\个人资料\DotNetCore\GitRepository\DotNetCore\AspNetCoreNodeApp\Middlewares\ApiAuthorizedMiddleware.cs
+E:\个人资料\DotNetCore\GitRepository\DotNetCore\AspNetCoreNodeApp\Middlewares\ApiAuthorizedOptions.cs
+E:\个人资料\DotNetCore\GitRepository\DotNetCore\AspNetCoreNodeApp\Middlewares\ApiAuthorizedServicesExtensions.cs
+E:\个人资料\DotNetCore\GitRepository\DotNetCore\AspNetCoreNodeApp\Middlewares\BaseResponseResult.cs
+E:\个人资料\DotNetCore\GitRepository\DotNetCore\AspNetCoreNodeApp\Middlewares\HMACMD5Helper.cs
+E:\个人资料\DotNetCore\GitRepository\DotNetCore\AspNetCoreNodeApp\Middlewares\RequestInfo.cs
