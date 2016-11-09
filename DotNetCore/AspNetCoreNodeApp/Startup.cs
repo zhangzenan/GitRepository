@@ -45,6 +45,8 @@ namespace AspNetCoreNodeApp
                 options.ExpiredSecond = Convert.ToInt32(Configuration.GetSection("ApiKey")["ExpiredSecond"]);
             });
 
+            //依赖注入容器中添加StopWatch
+            services.AddTransient<StopWatch>();
             services.AddMvc();
 
             //启用 Node Services
@@ -57,12 +59,14 @@ namespace AspNetCoreNodeApp
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
+            app.UseMiddleware<TimeMiddleware>();
+
             //api authorized middleware
-            app.UseApiAuthorized();
+            //app.UseApiAuthorized();
 
             app.UseApplicationInsightsRequestTelemetry();
 
-            app.UseApplicationInsightsExceptionTelemetry();
+            app.UseApplicationInsightsExceptionTelemetry();           
 
             app.UseMvc();
         }

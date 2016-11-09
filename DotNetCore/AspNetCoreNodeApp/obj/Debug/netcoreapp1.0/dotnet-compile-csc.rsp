@@ -184,3 +184,5 @@
 "E:\个人资料\GitRepository\DotNetCore\AspNetCoreNodeApp\Middlewares\BaseResponseResult.cs"
 "E:\个人资料\GitRepository\DotNetCore\AspNetCoreNodeApp\Middlewares\HMACMD5Helper.cs"
 "E:\个人资料\GitRepository\DotNetCore\AspNetCoreNodeApp\Middlewares\RequestInfo.cs"
+"E:\个人资料\GitRepository\DotNetCore\AspNetCoreNodeApp\Middlewares\StopWatch.cs"
+"E:\个人资料\GitRepository\DotNetCore\AspNetCoreNodeApp\Middlewares\TimeMiddleware.cs"
