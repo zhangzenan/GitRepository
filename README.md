@@ -1,2 +1,2 @@
 # GitRepository
-dotnetCore 仓库
+This is my dotnetCore respository.
