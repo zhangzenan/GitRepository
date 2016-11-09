@@ -9,7 +9,7 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "AspNetCoreNodeApp", "AspNet
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ServiceMonitor", "ServiceMonitor\ServiceMonitor.xproj", "{254AB778-40C4-49C4-AC57-B4455C635B4E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B0329A94-3CCB-48EE-9EA4-4A44C47AC834}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src1", "src1", "{B0329A94-3CCB-48EE-9EA4-4A44C47AC834}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
