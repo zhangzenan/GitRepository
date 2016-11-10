@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using AspNetCoreNodeApp.Middlewares;
+using Microsoft.AspNetCore.Http;
 
 namespace AspNetCoreNodeApp
 {
@@ -61,14 +62,40 @@ namespace AspNetCoreNodeApp
 
             app.UseMiddleware<TimeMiddleware>();
 
+            //Map
+            app.Map("/mapTest", HandleMap);
+
+            //MapWhen
+            app.MapWhen(context =>
+            {
+                return context.Request.Query.ContainsKey("q");
+            }, HandleQuery);
+
             //api authorized middleware
             //app.UseApiAuthorized();
 
             app.UseApplicationInsightsRequestTelemetry();
 
-            app.UseApplicationInsightsExceptionTelemetry();           
+            app.UseApplicationInsightsExceptionTelemetry();
 
             app.UseMvc();
         }
+
+        private static void HandleMap(IApplicationBuilder app)
+        {
+            app.Run(async context =>
+            {
+                await context.Response.WriteAsync("Hello ,that is Handle Map ");
+            });
+        }
+
+        private static void HandleQuery(IApplicationBuilder app)
+        {
+            app.Run(async context =>
+            {
+                await context.Response.WriteAsync("  Hello ,this is Handle Query ");
+            });
+        }
+
     }
 }
