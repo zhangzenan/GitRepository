@@ -1,2 +1,2 @@
 # GitRepository
-这是我的第一个github仓库
+This is my dotnetCore respository.
