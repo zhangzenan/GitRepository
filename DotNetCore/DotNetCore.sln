@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ASP.NETCore", "ASP.NETCore\ASP.NETCore.xproj", "{D301E1C0-F757-48FC-A7AD-FCA1BE24C4C4}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B0329A94-3CCB-48EE-9EA4-4A44C47AC834}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "AspNetCoreNodeApp", "AspNetCoreNodeApp\AspNetCoreNodeApp.xproj", "{E9207C7E-BD01-4200-A2BE-5F53EFD84571}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ASP.NETCore", "src\ASP.NETCore\ASP.NETCore.xproj", "{D301E1C0-F757-48FC-A7AD-FCA1BE24C4C4}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ServiceMonitor", "ServiceMonitor\ServiceMonitor.xproj", "{254AB778-40C4-49C4-AC57-B4455C635B4E}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "AspNetCoreNodeApp", "src\AspNetCoreNodeApp\AspNetCoreNodeApp.xproj", "{E9207C7E-BD01-4200-A2BE-5F53EFD84571}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src1", "src1", "{B0329A94-3CCB-48EE-9EA4-4A44C47AC834}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ServiceMonitor", "src\ServiceMonitor\ServiceMonitor.xproj", "{254AB778-40C4-49C4-AC57-B4455C635B4E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
