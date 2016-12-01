@@ -3,23 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ASP.NETCore", "ASP.NETCore\ASP.NETCore.xproj", "{D301E1C0-F757-48FC-A7AD-FCA1BE24C4C4}"
-=======
->>>>>>> 4d2045970c9dadca06e3e9960fbc82eeaa84c45f
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B0329A94-3CCB-48EE-9EA4-4A44C47AC834}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ASP.NETCore", "src\ASP.NETCore\ASP.NETCore.xproj", "{D301E1C0-F757-48FC-A7AD-FCA1BE24C4C4}"
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "AspNetCoreNodeApp", "src\AspNetCoreNodeApp\AspNetCoreNodeApp.xproj", "{E9207C7E-BD01-4200-A2BE-5F53EFD84571}"
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ServiceMonitor", "src\ServiceMonitor\ServiceMonitor.xproj", "{254AB778-40C4-49C4-AC57-B4455C635B4E}"
-<<<<<<< HEAD
-=======
->>>>>>> fcea761e85d996882fdc5645098318dbd44cba95
->>>>>>> 4d2045970c9dadca06e3e9960fbc82eeaa84c45f
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ASP.NETCore", "src\ASP.NETCore\ASP.NETCore.xproj", "{94483CE6-FD79-4E81-B551-9F1DB2CACB06}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "HttpsDemo", "src\HttpsDemo\HttpsDemo.xproj", "{FABE6668-F28D-42DF-8F5C-C493555A8F74}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,12 +19,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D301E1C0-F757-48FC-A7AD-FCA1BE24C4C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D301E1C0-F757-48FC-A7AD-FCA1BE24C4C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D301E1C0-F757-48FC-A7AD-FCA1BE24C4C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D301E1C0-F757-48FC-A7AD-FCA1BE24C4C4}.Release|Any CPU.Build.0 = Release|Any CPU
-<<<<<<< HEAD
-=======
 		{E9207C7E-BD01-4200-A2BE-5F53EFD84571}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E9207C7E-BD01-4200-A2BE-5F53EFD84571}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9207C7E-BD01-4200-A2BE-5F53EFD84571}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -41,14 +27,22 @@ Global
 		{254AB778-40C4-49C4-AC57-B4455C635B4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{254AB778-40C4-49C4-AC57-B4455C635B4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{254AB778-40C4-49C4-AC57-B4455C635B4E}.Release|Any CPU.Build.0 = Release|Any CPU
->>>>>>> fcea761e85d996882fdc5645098318dbd44cba95
+		{94483CE6-FD79-4E81-B551-9F1DB2CACB06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94483CE6-FD79-4E81-B551-9F1DB2CACB06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94483CE6-FD79-4E81-B551-9F1DB2CACB06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94483CE6-FD79-4E81-B551-9F1DB2CACB06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FABE6668-F28D-42DF-8F5C-C493555A8F74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FABE6668-F28D-42DF-8F5C-C493555A8F74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FABE6668-F28D-42DF-8F5C-C493555A8F74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FABE6668-F28D-42DF-8F5C-C493555A8F74}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{D301E1C0-F757-48FC-A7AD-FCA1BE24C4C4} = {B0329A94-3CCB-48EE-9EA4-4A44C47AC834}
 		{E9207C7E-BD01-4200-A2BE-5F53EFD84571} = {B0329A94-3CCB-48EE-9EA4-4A44C47AC834}
 		{254AB778-40C4-49C4-AC57-B4455C635B4E} = {B0329A94-3CCB-48EE-9EA4-4A44C47AC834}
+		{94483CE6-FD79-4E81-B551-9F1DB2CACB06} = {B0329A94-3CCB-48EE-9EA4-4A44C47AC834}
+		{FABE6668-F28D-42DF-8F5C-C493555A8F74} = {B0329A94-3CCB-48EE-9EA4-4A44C47AC834}
 	EndGlobalSection
 EndGlobal
