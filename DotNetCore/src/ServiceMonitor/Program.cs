@@ -1,5 +1,6 @@
 ﻿using ServiceMonitor.Dapper;
 using ServiceMonitor.装饰者模式;
+using ServiceMonitor.观察者模式;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,9 +47,24 @@ namespace ServiceMonitor
             //applePhoneWithAccessoriesAndSticker.Print();
 
             //Dapper           
+            //var product = new Program().Get(1);
+            //Console.WriteLine(product.Name);
 
-            var product = new Program().Get(1);
-            Console.WriteLine(product.Name);
+            //观察者模式
+            TenXun tenXun = new TenXunGame("TenXun Game", "Have a new game published ....");
+            Subscriber lh = new Subscriber("Learning Hard");
+            Subscriber tom = new Subscriber("Tom");
+
+            // 添加订阅者
+            tenXun.AddObserver(new NotifyEventHandler(lh.ReceiveAndPrint));
+            tenXun.AddObserver(new NotifyEventHandler(tom.ReceiveAndPrint));
+
+            tenXun.Update();
+
+            Console.WriteLine("-----------------------------------");
+            Console.WriteLine("移除Tom订阅者");
+            tenXun.RemoveObserver(new NotifyEventHandler(tom.ReceiveAndPrint));
+            tenXun.Update();
             Console.ReadKey();
         }
 
