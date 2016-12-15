@@ -1,8 +1,8 @@
-﻿{
+{
   "dependencies": {
     "Microsoft.NETCore.App": {
-      "version": "1.0.1"
-      //"type": "platform"
+      "version": "1.0.1",
+      "type": "platform"
     },
     "Microsoft.ApplicationInsights.AspNetCore": "1.0.0",
     "Microsoft.AspNetCore.Mvc": "1.0.1",
@@ -16,7 +16,10 @@
     "Microsoft.Extensions.Logging.Console": "1.0.0",
     "Microsoft.Extensions.Logging.Debug": "1.0.0",
     "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
-    "Microsoft.AspNetCore.NodeServices": "1.0.0-beta-000019"
+    "Microsoft.AspNetCore.NodeServices": "1.0.0-beta-000019",
+    "Swashbuckle.SwaggerUi": "6.0.0-beta902",
+    "Swashbuckle.SwaggerGen": "6.0.0-beta902",
+    "Microsoft.AspNetCore.StaticFiles": "1.1.0"
   },
 
   "tools": {
@@ -34,7 +37,8 @@
 
   "buildOptions": {
     "emitEntryPoint": true,
-    "preserveCompilationContext": true
+    "preserveCompilationContext": true,
+    "xmlDoc": true
   },
 
   "runtimeOptions": {
@@ -55,10 +59,10 @@
 
   "scripts": {
     "postpublish": [ "dotnet publish-iis --publish-folder %publish:OutputPath% --framework %publish:FullTargetFramework%" ]
-  },
-  //跨平台发布需要添加如下节点
-  "runtimes": {
-    "ubuntu.14.04-x64": {}, //运行在ubuntu.14.04的64位系统
-    "win10-x64": {} //运行在win7的64位系统
   }
+  //跨平台发布需要添加如下节点
+  //"runtimes": {
+  //  "ubuntu.14.04-x64": {}, //运行在ubuntu.14.04的64位系统
+  //  "win10-x64": {} //运行在win7的64位系统
+  //}
 }

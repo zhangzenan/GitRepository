@@ -18,6 +18,11 @@ namespace AspNetCoreNodeApp.Controllers
             return View();
         }
 
+        /// <summary>
+        /// NodeJs调用
+        /// </summary>
+        /// <param name="nodeServices"></param>
+        /// <returns></returns>
         [Route("Order")]
         public async Task<IActionResult> Get([FromServices] INodeServices nodeServices)
         {

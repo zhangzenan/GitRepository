@@ -9,6 +9,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using AspNetCoreNodeApp.Middlewares;
 using Microsoft.AspNetCore.Http;
+using System.IO;
+using Microsoft.Extensions.PlatformAbstractions;
 
 namespace AspNetCoreNodeApp
 {
@@ -40,18 +42,31 @@ namespace AspNetCoreNodeApp
             services.AddApplicationInsightsTelemetry(Configuration);
 
             //api authorized middleware
-            services.AddApiAuthorized(options =>
-            {
-                options.EncryptKey = Configuration.GetSection("ApiKey")["EncryptKey"];
-                options.ExpiredSecond = Convert.ToInt32(Configuration.GetSection("ApiKey")["ExpiredSecond"]);
-            });
+            //services.AddApiAuthorized(options =>
+            //{
+            //    options.EncryptKey = Configuration.GetSection("ApiKey")["EncryptKey"];
+            //    options.ExpiredSecond = Convert.ToInt32(Configuration.GetSection("ApiKey")["ExpiredSecond"]);
+            //});
 
             //依赖注入容器中添加StopWatch
-            services.AddTransient<StopWatch>();
+            //services.AddTransient<StopWatch>();
             services.AddMvc();
 
             //启用 Node Services
             services.AddNodeServices();
+
+            //添加Swagger
+            services.AddSwaggerGen();
+            services.ConfigureSwaggerGen(options=> {
+                options.SingleApiVersion(new Swashbuckle.Swagger.Model.Info {
+                    Version="v2",
+                    Title="My Web Application",
+                    Description="RESTful API for My Web Application",
+                    TermsOfService="None"
+                });
+                options.IncludeXmlComments(GetXmlCommentsPath()); 
+                options.DescribeAllEnumsAsStrings();
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline
@@ -60,16 +75,16 @@ namespace AspNetCoreNodeApp
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
-            app.UseMiddleware<TimeMiddleware>();
+            //app.UseMiddleware<TimeMiddleware>();
 
             //Map
-            app.Map("/mapTest", HandleMap);
+            //app.Map("/mapTest", HandleMap);
 
             //MapWhen
-            app.MapWhen(context =>
-            {
-                return context.Request.Query.ContainsKey("q");
-            }, HandleQuery);
+            //app.MapWhen(context =>
+            //{
+            //    return context.Request.Query.ContainsKey("q");
+            //}, HandleQuery);
 
             //api authorized middleware
             //app.UseApiAuthorized();
@@ -78,7 +93,14 @@ namespace AspNetCoreNodeApp
 
             app.UseApplicationInsightsExceptionTelemetry();
 
+            ////添加Swagger
+            app.UseStaticFiles();
+            app.UseSwagger();
+            app.UseSwaggerUi();
+
             app.UseMvc();
+
+       
         }
 
         private static void HandleMap(IApplicationBuilder app)
@@ -95,6 +117,12 @@ namespace AspNetCoreNodeApp
             {
                 await context.Response.WriteAsync("  Hello ,this is Handle Query ");
             });
+        }
+
+        private string GetXmlCommentsPath()
+        {
+            var app = PlatformServices.Default.Application;
+            return Path.Combine(app.ApplicationBasePath, "AspNetCoreNodeApp.xml");// 注意：此处替换成所生成的XML documentation的文件名。
         }
 
     }
