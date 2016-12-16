@@ -11,12 +11,7 @@ namespace AspNetCoreNodeApp.Controllers
 {
     [Route("api/[controller]")]
     public class NodeController : Controller
-    {
-        // GET: /<controller>/
-        public IActionResult Index()
-        {
-            return View();
-        }
+    {    
 
         /// <summary>
         /// NodeJs调用
@@ -24,10 +19,11 @@ namespace AspNetCoreNodeApp.Controllers
         /// <param name="nodeServices"></param>
         /// <returns></returns>
         [Route("Order")]
+        [HttpGet]
         public async Task<IActionResult> Get([FromServices] INodeServices nodeServices)
         {
-            var result = await nodeServices.InvokeAsync<int>("./Node/addNumbers",1,2);
-            return Content("1+2="+result);
+            var result = await nodeServices.InvokeAsync<int>("./Node/addNumbers", 1, 2);
+            return Content("1+2=" + result);
         }
     }
 }

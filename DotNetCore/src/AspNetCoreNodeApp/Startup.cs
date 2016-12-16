@@ -53,18 +53,20 @@ namespace AspNetCoreNodeApp
             services.AddMvc();
 
             //启用 Node Services
-            services.AddNodeServices();
+            //services.AddNodeServices();
 
             //添加Swagger
             services.AddSwaggerGen();
-            services.ConfigureSwaggerGen(options=> {
-                options.SingleApiVersion(new Swashbuckle.Swagger.Model.Info {
-                    Version="v2",
-                    Title="My Web Application",
-                    Description="RESTful API for My Web Application",
-                    TermsOfService="None"
+            services.ConfigureSwaggerGen(options =>
+            {
+                options.SingleApiVersion(new Swashbuckle.Swagger.Model.Info
+                {
+                    Version = "v1",
+                    Title = "乐舱网API",
+                    Description = "RESTful API for My Web Application",
+                    TermsOfService = "None"
                 });
-                options.IncludeXmlComments(GetXmlCommentsPath()); 
+                options.IncludeXmlComments(GetXmlCommentsPath());
                 options.DescribeAllEnumsAsStrings();
             });
         }
@@ -100,7 +102,7 @@ namespace AspNetCoreNodeApp
 
             app.UseMvc();
 
-       
+
         }
 
         private static void HandleMap(IApplicationBuilder app)

@@ -6,6 +6,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AspNetCoreNodeApp.Controllers
 {
+    /// <summary>
+    /// 测试API
+    /// </summary>
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
