@@ -68,6 +68,8 @@ namespace AspNetCoreNodeApp
                 });
                 options.IncludeXmlComments(GetXmlCommentsPath());
                 options.DescribeAllEnumsAsStrings();
+                //添加TokenHeader
+                options.OperationFilter<AddAuthTokenHeaderParameter>();
             });
         }
 

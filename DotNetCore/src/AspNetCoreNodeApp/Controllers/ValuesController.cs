@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using AspNetCoreNodeApp.Middlewares;
 
 namespace AspNetCoreNodeApp.Controllers
 {
@@ -17,6 +18,7 @@ namespace AspNetCoreNodeApp.Controllers
        /// </summary>
        /// <returns></returns>
         [HttpGet]
+        [Auth]
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
