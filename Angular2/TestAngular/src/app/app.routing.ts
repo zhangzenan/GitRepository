@@ -8,7 +8,6 @@ import { ArticledetailComponent } from './articledetail/articledetail.component'
 const routes:Routes=[
 { path: 'home',component: AppComponent},
 { path: 'article',component: ArticleComponent},
-{ path: 'articledetail/:id',component: ArticledetailComponent},
 { path: '',redirectTo:"/home",pathMatch: 'full'}
 ];
 
