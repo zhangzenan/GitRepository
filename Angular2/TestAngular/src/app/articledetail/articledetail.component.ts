@@ -61,8 +61,8 @@ export class ArticledetailComponent implements OnInit {
 
 	ngOnInit() { 
 		let id=this.aRoute.params
-		.switchMap((Params:Params)=>Params['id'])
-		.subscribe(x=>this.blog=this.bService.getSelectedBlog(+x))
+		.switchMap((params:Params)=>this.bService.getSelectedBlog(+params['id']))
+		.subscribe(x=>this.blog=x)
 	}
 
   doComment()
