@@ -10,14 +10,34 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
+var forms_1 = require('@angular/forms');
 var app_component_1 = require('./app.component');
+var click_me_component_1 = require('./click-me.component');
+var keyup_component_1 = require('./keyup.component');
+var keyup2_component_1 = require('./keyup2.component');
+var hero_form_component_1 = require('./hero-form/hero-form.component');
+var heroes_component_1 = require('./heroes/heroes.component');
+var hero_list_component_1 = require('./heroes/hero-list.component');
+var logger_service_1 = require('./logger.service');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
-            declarations: [app_component_1.AppComponent],
+            imports: [
+                platform_browser_1.BrowserModule,
+                forms_1.FormsModule
+            ],
+            declarations: [
+                app_component_1.AppComponent,
+                click_me_component_1.ClickMeComponent,
+                keyup_component_1.keyUpComponent_v1,
+                keyup2_component_1.keyUpComponent_v2,
+                hero_form_component_1.HeroFormComponent,
+                heroes_component_1.HeroesComponent,
+                hero_list_component_1.HeroListComponent
+            ],
+            providers: [logger_service_1.Logger],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])
