@@ -1,16 +1,20 @@
-import { Component } from '@angular/core';
+import { Component ,OnInit} from '@angular/core';
 import {BLOGS,Blog} from '../data/blog';
 import {BlogService} from './../data/blog.service';
 
 import {Observable} from 'rxjs';
-
+declare var $:any;
 @Component({
 	selector: 'ngarticle',
 	templateUrl: './article.component.html',
 	styleUrls:['./article.component.css']
 })
 
-export class ArticleComponent  {
+export class ArticleComponent  implements OnInit{
+  ngOnInit()
+  {
+    $("#testdiv").html("<p>this is a string from jQuery html setting</p>");
+  }
 	blogList:Blog[];
 	selectedBlog:Blog;
 	editStr:string;
