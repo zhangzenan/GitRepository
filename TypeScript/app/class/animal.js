@@ -19,24 +19,24 @@ var Animal = (function () {
 var Snake = (function (_super) {
     __extends(Snake, _super);
     function Snake(name) {
-        supper(name);
+        _super.call(this, name);
     }
     Snake.prototype.move = function (distanceInMeters) {
         if (distanceInMeters === void 0) { distanceInMeters = 5; }
         console.log("Slithering...");
-        supper.move(distanceInMeters);
+        _super.prototype.move.call(this, distanceInMeters);
     };
     return Snake;
 }(Animal));
 var Horse = (function (_super) {
     __extends(Horse, _super);
     function Horse(name) {
-        supper(name);
+        _super.call(this, name);
     }
     Horse.prototype.move = function (distanceInMeters) {
         if (distanceInMeters === void 0) { distanceInMeters = 45; }
         console.log("Galloping...");
-        supper.move(distanceInMeters);
+        _super.prototype.move.call(this, distanceInMeters);
     };
     return Horse;
 }(Animal));

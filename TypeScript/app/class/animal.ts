@@ -13,21 +13,21 @@ class Animal {
 
 class Snake extends Animal{
     constructor(name:string){
-        supper(name);
+        super(name);
     }
     move(distanceInMeters=5){
         console.log("Slithering...");
-        supper.move(distanceInMeters);
+        super.move(distanceInMeters);
     }
 }
 
 class Horse extends Animal{
     constructor(name:string){
-        supper(name);
+        super(name);
     }
     move(distanceInMeters=45){
         console.log("Galloping...");
-        supper.move(distanceInMeters);
+        super.move(distanceInMeters);
     }
 }
 
