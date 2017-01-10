@@ -1,0 +1,6 @@
+{
+  "name": "webpack-example",
+  "version": "1.0.0",
+  "description": "A simple webpack example.",
+  "main": "Test.js"   
+}

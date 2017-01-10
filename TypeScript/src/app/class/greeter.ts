@@ -19,12 +19,12 @@ let greeter = new Greeter("world");
 document.body.innerHTML=greeter.greet();
 
 let greeter1:Greeter;
-greeter1=new Greeter();
+greeter1=new Greeter("aaa");
 console.log(greeter1.greet());
 
 let greeterMaker:typeof Greeter=Greeter;
 greeterMaker.standardGreeting="Hey there!";
 
-let greeter2:Greeter=new greeterMaker();
-console.log(greeter2.greet());
+//let greeter2:Greeter=new greeterMaker();
+//console.log(greeter2.greet());
 

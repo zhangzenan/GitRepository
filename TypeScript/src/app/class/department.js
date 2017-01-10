@@ -18,7 +18,7 @@ var Department = (function () {
 var AccountingDepartment = (function (_super) {
     __extends(AccountingDepartment, _super);
     function AccountingDepartment() {
-        _super.call(this, 'Accoungting and Auditing');
+        return _super.call(this, 'Accoungting and Auditing') || this;
     }
     AccountingDepartment.prototype.printMeeting = function () {
         console.log('The Accounting Department meets each Monday at 10am.');
@@ -29,8 +29,8 @@ var AccountingDepartment = (function (_super) {
     return AccountingDepartment;
 }(Department));
 var department;
-department = new Department(); // error: cannot create an instance of an abstract class
-department = new AccountingDepartment("张三");
+//department=new Department();// error: cannot create an instance of an abstract class
+department = new AccountingDepartment();
 department.printName();
 //department.printMeeting();
 //department.generateReports(); 

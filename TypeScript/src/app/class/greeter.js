@@ -10,16 +10,16 @@ var Greeter = (function () {
             return Greeter.standardGreeting;
         }
     };
-    Greeter.standardGreeting = "Hello,there";
     return Greeter;
 }());
+Greeter.standardGreeting = "Hello,there";
 var greeter = new Greeter("world");
 document.body.innerHTML = greeter.greet();
 var greeter1;
-greeter1 = new Greeter();
+greeter1 = new Greeter("aaa");
 console.log(greeter1.greet());
 var greeterMaker = Greeter;
 greeterMaker.standardGreeting = "Hey there!";
-var greeter2 = new greeterMaker();
-console.log(greeter2.greet());
+//let greeter2:Greeter=new greeterMaker();
+//console.log(greeter2.greet());
 //# sourceMappingURL=greeter.js.map

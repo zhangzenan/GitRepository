@@ -34,8 +34,22 @@
   "devDependencies": {
     "@types/core-js": "^0.9.34",
     "@types/node": "^6.0.45",
+    "browserify": "^13.3.0",
     "concurrently": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-sourcemaps": "^2.3.0",
+    "gulp-typescript": "^3.1.4",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.8",
     "lite-server": "^2.2.2",
-    "typescript": "^2.0.3"
-  }
+    "tsify": "^3.0.0",
+    "typescript": "^2.1.4",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.8.0"
+  },
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }

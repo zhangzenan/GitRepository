@@ -86,7 +86,7 @@
 //重载
 let suits=["hearts", "spades", "clubs", "diamonds"];
 
-function pickedCard(x:{suit:string;card:number;}[]}):number;
+function pickedCard(x:{suit:string;card:number;}[]):number;
 function pickedCard(x:number):{suit:string;card:number;};
 function pickedCard(x):any{
     if(typeof x=="object"){

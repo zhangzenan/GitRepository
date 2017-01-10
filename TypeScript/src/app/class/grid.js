@@ -10,9 +10,9 @@ var Grid = (function () {
         var yDist = (point.y - Grid.origin.y);
         return Math.sqrt(xDist * xDist + yDist * yDist) / this.scale;
     };
-    Grid.origin = { x: 0, y: 0 };
     return Grid;
 }());
+Grid.origin = { x: 0, y: 0 };
 var grid1 = new Grid(1.0);
 var grid2 = new Grid(5.0);
 console.log(grid1.calculateDistanceFromOrigin({ x: 10, y: 10 }));

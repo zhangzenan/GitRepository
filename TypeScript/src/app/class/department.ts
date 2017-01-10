@@ -28,8 +28,8 @@ class AccountingDepartment extends Department{
 }
 
 let department:Department;
-department=new Department();// error: cannot create an instance of an abstract class
-department=new AccountingDepartment("张三");
+//department=new Department();// error: cannot create an instance of an abstract class
+department=new AccountingDepartment();
 department.printName();
 //department.printMeeting();
 //department.generateReports();

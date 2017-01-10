@@ -19,7 +19,7 @@ var Animal = (function () {
 var Snake = (function (_super) {
     __extends(Snake, _super);
     function Snake(name) {
-        _super.call(this, name);
+        return _super.call(this, name) || this;
     }
     Snake.prototype.move = function (distanceInMeters) {
         if (distanceInMeters === void 0) { distanceInMeters = 5; }
@@ -31,7 +31,7 @@ var Snake = (function (_super) {
 var Horse = (function (_super) {
     __extends(Horse, _super);
     function Horse(name) {
-        _super.call(this, name);
+        return _super.call(this, name) || this;
     }
     Horse.prototype.move = function (distanceInMeters) {
         if (distanceInMeters === void 0) { distanceInMeters = 45; }
